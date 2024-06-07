@@ -58,6 +58,10 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--default-color);
   background-color: var(--background-color);
@@ -649,6 +653,17 @@ h6 {
 
 .scroll-top.active {
   visibility: visible;
+  opacity: 1;
+}
+
+[data-aos] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transition-duration: 600ms;
+  transition-timing-function: ease;
+}
+
+[data-aos].aos-animate {
   opacity: 1;
 }
 
